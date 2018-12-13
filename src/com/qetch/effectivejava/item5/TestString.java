@@ -11,6 +11,6 @@ public class TestString {
 		String s3 = "stringette";
 		
 		System.out.println(s1 == s2);//false 
-		System.out.println(s2 == s3);//true ÏàÍ¬×ÖÃæ³£Á¿µÄ×Ö·û´®¿ÉÒÔ±»ÖØÓÃ
+		System.out.println(s2 == s3);//true ç›¸åŒå­—é¢å¸¸é‡çš„å­—ç¬¦ä¸²å¯ä»¥è¢«é‡ç”¨
 	}
 }
