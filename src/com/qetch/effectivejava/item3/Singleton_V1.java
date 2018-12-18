@@ -1,9 +1,9 @@
 package com.qetch.effectivejava.item3;
 
-public class Singleton_V1 {//ÀÁººÊ½µ¥Àı
+public class Singleton_V1 {//æ‡’æ±‰å¼å•ä¾‹
 	private static Singleton_V1 INSTANCE;
 	
-	private Singleton_V1() {}//¹¹ÔìÆ÷¸ÄÎªË½ÓĞ£¬¿ÉÒÔ·ÀÖ¹Íâ²¿µ÷ÓÃ´´½¨¶ÔÏó
+	private Singleton_V1() {}//æ„é€ å™¨æ”¹ä¸ºç§æœ‰ï¼Œå¯ä»¥é˜²æ­¢å¤–éƒ¨è°ƒç”¨åˆ›å»ºå¯¹è±¡
 	
 	public static Singleton_V1 getInstance() {
 		if (INSTANCE == null) {

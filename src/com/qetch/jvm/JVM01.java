@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JVM01 {
-	byte[] b = new byte[1*1024*1024];//ÉùÃ÷Ò»¸öb³ÉÔ±±äÁ¿£¬Õ¼ÓÃ1MÄÚ´æ
+	byte[] b = new byte[1*1024*1024];//å£°æ˜ä¸€ä¸ªbæˆå‘˜å˜é‡ï¼Œå ç”¨1Må†…å­˜
 	
 	public static void main(String[] args) {
 		List<JVM01> list = new ArrayList<>();
 		
 		try {
 			while (true) {
-				list.add(new JVM01());//´Ë´¦ÓĞ¿ÉÄÜ·¢Éú¶ÑÄÚ´æÒç³öµÄÎÊÌâ
+				list.add(new JVM01());//æ­¤å¤„æœ‰å¯èƒ½å‘ç”Ÿå †å†…å­˜æº¢å‡ºçš„é—®é¢˜
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -20,7 +20,7 @@ public class JVM01 {
 	}
 }
 
-//VM arguments£¨ĞéÄâ»ú²ÎÊı£©
-//-Xms1m -Xmx8m 									ÉèÖÃ¶ÑµÄ³õÊ¼»¯ÄÚ´æÎª1M£¬ÔËĞĞÊ±×î´óÄÚ´æÎª8M
-//-Xms1m -Xmx8m -XX:+PrintGCDetails  				ÉèÖÃ¶ÑµÄ³õÊ¼»¯ÄÚ´æÎª1M£¬ÔËĞĞÊ±×î´óÄÚ´æÎª8M£¬²¢´òÓ¡GCÈÕÖ¾
-//-Xms1m -Xmx8m -XX:+HeapDumpOnOutOfMemoryError   	ÉèÖÃ¶ÑµÄ³õÊ¼»¯ÄÚ´æÎª1M£¬ÔËĞĞÊ±×î´óÄÚ´æÎª8M£¬²¢µ¼³ö¶ÑÄÚ´æÒç³öµÄĞÅÏ¢ÎÄ¼ş£¨hprofÎÄ¼ş£©
+//VM argumentsï¼ˆè™šæ‹Ÿæœºå‚æ•°ï¼‰
+//-Xms1m -Xmx8m 									è®¾ç½®å †çš„åˆå§‹åŒ–å†…å­˜ä¸º1Mï¼Œè¿è¡Œæ—¶æœ€å¤§å†…å­˜ä¸º8M
+//-Xms1m -Xmx8m -XX:+PrintGCDetails  				è®¾ç½®å †çš„åˆå§‹åŒ–å†…å­˜ä¸º1Mï¼Œè¿è¡Œæ—¶æœ€å¤§å†…å­˜ä¸º8Mï¼Œå¹¶æ‰“å°GCæ—¥å¿—
+//-Xms1m -Xmx8m -XX:+HeapDumpOnOutOfMemoryError   	è®¾ç½®å †çš„åˆå§‹åŒ–å†…å­˜ä¸º1Mï¼Œè¿è¡Œæ—¶æœ€å¤§å†…å­˜ä¸º8Mï¼Œå¹¶å¯¼å‡ºå †å†…å­˜æº¢å‡ºçš„ä¿¡æ¯æ–‡ä»¶ï¼ˆhprofæ–‡ä»¶ï¼‰

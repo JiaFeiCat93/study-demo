@@ -1,11 +1,11 @@
 package com.qetch.effectivejava.item3;
 
-public class Singleton_V3 {//ÀÁººÊ½µ¥Àı
+public class Singleton_V3 {//æ‡’æ±‰å¼å•ä¾‹
 	private static Singleton_V3 INSTANCE;
 	
-	private Singleton_V3() {}//¹¹ÔìÆ÷¸ÄÎªË½ÓĞ£¬¿ÉÒÔ·ÀÖ¹Íâ²¿µ÷ÓÃ´´½¨¶ÔÏó
+	private Singleton_V3() {}//æ„é€ å™¨æ”¹ä¸ºç§æœ‰ï¼Œå¯ä»¥é˜²æ­¢å¤–éƒ¨è°ƒç”¨åˆ›å»ºå¯¹è±¡
 	
-	public static Singleton_V3 getInstance() {//Ë«ÖØ¼ì²é£¨Double-Check£©°æ±¾
+	public static Singleton_V3 getInstance() {//åŒé‡æ£€æŸ¥ï¼ˆDouble-Checkï¼‰ç‰ˆæœ¬
 		if (INSTANCE == null) {
 			synchronized (Singleton_V3.class) {
 				if (INSTANCE == null) {

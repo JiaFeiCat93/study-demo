@@ -3,7 +3,7 @@ package com.qetch.funning;
 import java.util.Scanner;
 
 /**
- * AIºËĞÄ´úÂë£¬¹ÀÖµ1¸öÒÚ
+ * AIæ ¸å¿ƒä»£ç ï¼Œä¼°å€¼1ä¸ªäº¿
  *
  */
 public class AiMain {
@@ -14,9 +14,9 @@ public class AiMain {
 		String str;
 		while (true) {
 			str = sc.next();
-			str = str.replace("Âğ", "");
-			str = str.replace("£¿", "£¡");
-			str = str.replace("£¿ ", "£¡");
+			str = str.replace("å—", "");
+			str = str.replace("ï¼Ÿ", "ï¼");
+			str = str.replace("ï¼Ÿ ", "ï¼");
 			System.out.println(str);
 		}
 	}
