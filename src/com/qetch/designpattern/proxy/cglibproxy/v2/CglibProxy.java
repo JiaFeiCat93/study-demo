@@ -6,6 +6,15 @@ import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
 
+/**
+ * Cglib代理：
+ * 第三方代理技术，cglib代理。可以对任何类生成代理，代理的原理是可以对目标对象接口实现代理，也可以进行继承代理。
+ * 需要引入cglib的jar文件（也需要asm.x.jar），但是Spring的核心包中已经包括了cglib功能，所以可以直接引入spring-core包。
+ * @ClassName: CglibProxy
+ * @Description: TODO(这里用一句话描述这个类的作用)
+ * @author zcw
+ * @date: 2019年3月12日 下午10:23:55
+ */
 public class CglibProxy {
 	
 	public static <T> Object getProxy(T t) {
