@@ -1,7 +1,7 @@
 package com.qetch.designpattern.strategy;
 
 /**
- * 
+ * 具体策略类2
  * @author ZCW
  *
  */
