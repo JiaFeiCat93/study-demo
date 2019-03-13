@@ -1,5 +1,10 @@
 package com.qetch.designpattern.strategy;
 
+/**
+ * 具体策略类1
+ * @author ZCW
+ *
+ */
 public class ChildrenStrategy implements Discount {
 
 	@Override
