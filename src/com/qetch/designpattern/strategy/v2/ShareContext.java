@@ -8,6 +8,7 @@ public class ShareContext {
 	
 	public static ShareContext getShareTarget(Integer type) {
 		String className = BundleUtil.getResult(type.toString());
+		System.out.println(className);
 		Class clazz;
 		try {
 			clazz = Class.forName(className);
@@ -34,4 +35,12 @@ public class ShareContext {
 		return shareLink.getShareLink(platform, userToken);
 	}
 	
+	public static ShareInfo getShareInfo(ShareContext context, String platform, String userToken) {
+		ShareInfo shareInfo = new ShareInfo();
+		shareInfo.setTitle(context.showTitle());
+		shareInfo.setContent(context.showContent());
+		shareInfo.setImageUrl(context.displayImageUrl(platform));
+		shareInfo.setLink(context.displayLink(platform, userToken));
+		return shareInfo;
+	}
 }

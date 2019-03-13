@@ -11,6 +11,6 @@ public class WeChatLink implements ShareLink {
 
 	@Override
 	public String getShareLink(String platform, String userToken) {
-		return BundleUtil.getResult("share.wechat.image.url." + platform) + userToken;
+		return BundleUtil.getResult("share.wechat.link." + platform) + userToken;
 	}
 }
