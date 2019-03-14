@@ -29,4 +29,8 @@ public class ShareInfo {
 	public void setLink(String link) {
 		this.link = link;
 	}
+	@Override
+	public String toString() {
+		return "ShareInfo [title=" + title + ", content=" + content + ", imageUrl=" + imageUrl + ", link=" + link + "]";
+	}
 }
