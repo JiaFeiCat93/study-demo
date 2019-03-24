@@ -331,4 +331,89 @@ public class MyLinkedList {
 		}
 		return slow;
 	}
+	
+	/**
+	 * 8.1.判断两个链表是否相交
+	 * @param: @param h1
+	 * @param: @param h2
+	 * @param: @return
+	 * @return: boolean
+	 * @throws
+	 */
+	public boolean isIntersect(Node h1, Node h2) {
+		if (null == h1 || null == h2) {
+			return false;
+		}
+		Node tail1 = h1;
+		// 找到链表h1的最后一个节点
+		while (tail1.next != null) {
+			tail1 = tail1.next;
+		}
+		
+		Node tail2 = h2;
+		// 找到链表h2的最后一个节点
+		while (tail2.next != null) {
+			tail2 = tail2.next;
+		}
+
+		return tail1 == tail2;
+	}
+	
+	/**
+	 * 8.2.如果两个链表相交，如何找到它们相交的第一个节点
+	 * @Title: getFirstMeetNode
+	 * @Description: TODO(这里用一句话描述这个方法的作用)
+	 * @param: @param h1
+	 * @param: @param h2
+	 * @param: @return
+	 * @return: Node
+	 * @throws
+	 */
+	public Node getFirstMeetNode(Node h1, Node h2) {
+		if (null == h1 || null == h2) {
+			return null;
+		}
+		Node tail1 = h1;
+		int len1 = 1;
+		// 找到链表h1的最后一个节点
+		while (tail1.next != null) {
+			tail1 = tail1.next;
+			len1++;
+		}
+		
+		Node tail2 = h2;
+		int len2 = 1;
+		// 找到链表h2的最后一个节点
+		while (tail2.next != null) {
+			tail2 = tail2.next;
+			len2++;
+		}
+		
+		// 两链表不相交
+		if (tail1 != tail2) {
+			return null;
+		}
+		
+		Node t1 = h1;
+		Node t2 = h2;
+		// 找出较长的链表，先遍历
+		if (len1 > len2) {
+			int d = len1 - len2;
+			while (d != 0) {
+				t1 = t1.next;
+				d--;
+			}
+		} else {
+			int d = len2 - len1;
+			while (d != 0) {
+				t2 = t2.next;
+				d--;
+			}
+		}
+		while (t1 != t2) {
+			t1 = t1.next;
+			t2 = t2.next;
+		}
+		return t1;
+	}
 }
