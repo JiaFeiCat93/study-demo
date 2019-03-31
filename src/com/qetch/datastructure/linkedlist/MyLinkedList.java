@@ -38,9 +38,9 @@ public class MyLinkedList {
 //		System.out.println("mid_node:" + mid_node.data);
 		
 		// 3.查找倒数第k个节点
-//		int k = 4;
-//		Node k_node = myLinkedList.findElem(head, k);
-//		System.out.println("k_node:" + k_node.data);
+		int k = 4;
+		Node k_node = myLinkedList.findElem(head, k);
+		System.out.println("k_node:" + k_node.data);
 		
 		// 4.对链表进行排序（data从小到大）
 //		Node order_node = myLinkedList.orderList();
@@ -325,6 +325,7 @@ public class MyLinkedList {
 		if (null == fast || null == fast.next) {
 			return null;
 		}
+		slow = head;
 		while (fast != slow) {
 			fast = fast.next;
 			slow = slow.next;

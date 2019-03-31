@@ -27,12 +27,12 @@ public class ThreadPoolTest implements Runnable {
 	}
 	
 	public static void main(String[] args) {
-//		test1();
-		test2();
+		test1();
+//		test2();
 	}
 	
 	private static void test1() {
-		LinkedBlockingQueue<Runnable> workQueue = new LinkedBlockingQueue<>(5); // 存放任务的队列
+		LinkedBlockingQueue<Runnable> workQueue = new LinkedBlockingQueue<>(6); // 存放任务的队列
 		int corePoolSize = 5; // 线程池核心线程数量
 		int maximumPoolSize = 10; // 线程池最大线程数量
 		int keepAliveTime = 60; // 当活跃线程数大于核心线程数时，空闲的多余线程最大存活时间
