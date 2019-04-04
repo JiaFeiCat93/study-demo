@@ -23,7 +23,7 @@ public class DeadLockTest2 {
 					}
 				}
 			}
-		});
+		}, "AA");
 		
 		Thread threadB = new Thread(new Runnable() {
 			
@@ -42,7 +42,7 @@ public class DeadLockTest2 {
 					}
 				}
 			}
-		});
+		}, "BB");
 		
 		threadA.start();
 		threadB.start();
